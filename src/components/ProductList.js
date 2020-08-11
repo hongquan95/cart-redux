@@ -1,14 +1,11 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
-import ProductItem from './ProductItem';
 
-function ProductList() {
+function ProductList(props) {
     return (
         <div className="row">
-            <ProductItem />
-            <ProductItem />
-            <ProductItem />
+            {props.children}
         </div>
     );
 }

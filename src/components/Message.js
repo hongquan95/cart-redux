@@ -2,10 +2,10 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
-function Message() {
+function Message({message}) {
     return (
         <h3>
-            <span className="badge amber darken-2">Buy product successfully !</span>
+            <span className="badge amber darken-2">{ message }</span>
         </h3>
     );
 }

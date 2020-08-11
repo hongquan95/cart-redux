@@ -2,7 +2,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 
-function CartResult() {
+function CartResult({cart}) {
+    const showTotalAmout = (cart) => {
+        return cart.reduce((total, first) => {
+            return total + (first.product?.price?? 0) * (first.quantity?? 0)
+        }, 0)
+    }
     return (
         <tr>
             <td colSpan={3} />
@@ -13,7 +18,7 @@ function CartResult() {
             </td>
             <td>
                 <h4>
-                    <strong>15$</strong>
+                    <strong>{showTotalAmout(cart)}$</strong>
                 </h4>
             </td>
             <td colSpan={3}>
@@ -24,5 +29,4 @@ function CartResult() {
         </tr>
     );
 }
-
 export default CartResult;

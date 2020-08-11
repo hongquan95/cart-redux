@@ -2,12 +2,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import Header from './Header';
-import ProductList from './ProductList';
-import Message from './Message';
-import Cart from './Cart';
 import Footer from './Footer';
 import TopNav from './TopNav';
 import NavBar from './NavBar';
+import ProductContainer from '../containers/ProductContainer';
+import CartContainer from '../containers/CartContainer';
+import MessageContainer from '../containers/MessageContainer';
 
 function App() {
     return (
@@ -20,11 +20,11 @@ function App() {
                 <div className="container">
                     <section className="section">
                         <Header />
-                        <ProductList />
+                        <ProductContainer />
                     </section>
-                    <Message />
+                    <MessageContainer />
                     <section className="section">
-                        <Cart />
+                        <CartContainer />
                     </section>
                 </div>
             </main>
